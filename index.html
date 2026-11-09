@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickView Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="control-panel">
+        <h2>Quick Assistant Tools</h2>
+        <p class="subtitle">Mode: Stealth Overlay (Android Chrome Compatible)</p>
+        
+        <div class="input-group">
+            <label for="apiKey">API Key (Gemini / OpenAI):</label>
+            <input type="password" id="apiKey" placeholder="Masukkan API Key Anda...">
+        </div>
+
+        <div class="input-group">
+            <label for="customPrompt">Target Concern / Instruksi:</label>
+            <textarea id="customPrompt" rows="3" placeholder="Contoh: Berikan jawaban singkat langsung pada poin utama..."></textarea>
+        </div>
+
+        <div class="button-group">
+            <button id="btnStart" class="btn primary">Aktifkan Floating Reader</button>
+            <button id="btnSave" class="btn secondary">Simpan Pengaturan</button>
+        </div>
+    </div>
+
+    <!-- Floating Stealth Overlay Button -->
+    <div id="floatingTrigger" class="floating-trigger">⚡</div>
+
+    <!-- Stealth Flash Popup (1 Detik, Samar) -->
+    <div id="flashPopup" class="flash-popup hidden">
+        <div id="popupContent" class="popup-content">Menunggu teks...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
